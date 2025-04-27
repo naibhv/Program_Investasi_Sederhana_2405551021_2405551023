@@ -30,6 +30,10 @@ public class MainInterface {
             }
             switch (option){
                 case 1 -> {
+                    AdminLoginInterface adminLoginInterface = new AdminLoginInterface();
+                    adminLoginInterface.display();
+                }
+                case 2 -> {
                     CustomerLoginInterface customerLoginInterface = new CustomerLoginInterface();
                     customerLoginInterface.display();
                 }
