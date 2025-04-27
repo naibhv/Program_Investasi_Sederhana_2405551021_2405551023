@@ -18,7 +18,7 @@ public class AdminLoginInterface {
             String inputUsername = scanner.nextLine();
             if(!adminLoginService.isUsernameExist(inputUsername)){
                 System.out.println("|------------------------------------------------------------|");
-                System.out.println("|                      username tidak ada                    |");
+                System.out.println("|                      username Invalid                      |");
                 System.out.println("|------------------------------------------------------------|");
                 continue;
             }

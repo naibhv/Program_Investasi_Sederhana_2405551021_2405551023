@@ -17,10 +17,10 @@ public class NationalGovermentSecuritiesAdminInterface {
     public void display() {
         while (true) {
             System.out.println("|============================================================|");
-            System.out.println("|     National Goverment Securities (SBN) Menu               |");
+            System.out.println("|     National Goverment Securities (NGS) Menu               |");
             System.out.println("|============================================================|");
-            System.out.println("|  1. View All SBN                                           |");
-            System.out.println("|  2. Create New SBN                                         |");
+            System.out.println("|  1. View All NGS                                           |");
+            System.out.println("|  2. Create New NGS                                         |");
             System.out.println("|  3. Back                                                   |");
             System.out.println("|============================================================|");
             System.out.print("  Choose an option: ");
@@ -28,10 +28,10 @@ public class NationalGovermentSecuritiesAdminInterface {
 
             switch (choice) {
                 case "1":
-                    viewAllSBN();
+                    viewAllNGS();
                     break;
                 case "2":
-                    createNewSBN();
+                    createNewNGS();
                     break;
                 case "3":
                     return;
@@ -43,37 +43,37 @@ public class NationalGovermentSecuritiesAdminInterface {
         }
     }
 
-    private void viewAllSBN() {
+    private void viewAllNGS() {
         List<NationalGovermentSecurities> list = getService.getAllSecurities();
 
         if (list.isEmpty()) {
             System.out.println("|------------------------------------------------------------|");
-            System.out.println("|  >> No SBN available.                                      |");
+            System.out.println("|  >> No NGS available.                                      |");
             System.out.println("|------------------------------------------------------------|");
             return;
         }
 
-        System.out.println("\nList of SBN:");
-        for (NationalGovermentSecurities sbn : list) {
+        System.out.println("\nList of NGS:");
+        for (NationalGovermentSecurities ngs : list) {
             System.out.println("|------------------------------------------------------------|");
-            System.out.println("  Code: " + sbn.getCode());
-            System.out.println("  Name: " + sbn.getName());
-            System.out.println("  Interest Rate: " + sbn.getInterestRate() + "%");
-            System.out.println("  On Month: " + sbn.getOnMonth());
-            System.out.println("  Maturity Date: " + sbn.getMaturityDate());
-            System.out.println("  National Quota: " + sbn.getNationalQuota());
+            System.out.println("  Code: " + ngs.getCode());
+            System.out.println("  Name: " + ngs.getName());
+            System.out.println("  Interest Rate: " + ngs.getInterestRate() + "%");
+            System.out.println("  On Month: " + ngs.getOnMonth());
+            System.out.println("  Maturity Date: " + ngs.getMaturityDate());
+            System.out.println("  National Quota: " + ngs.getNationalQuota());
             System.out.println("|------------------------------------------------------------|");
 
         }
     }
 
-    private void createNewSBN() {
+    private void createNewNGS() {
         try {
             System.out.println("|============================================================|");
-            System.out.print("  Enter SBN code: ");
+            System.out.print("  Enter NGS code: ");
             String code = scanner.nextLine();
 
-            System.out.print("  Enter SBN name: ");
+            System.out.print("  Enter NGS name: ");
             String name = scanner.nextLine();
 
             System.out.print("  Enter interest rate (%): ");
@@ -88,19 +88,19 @@ public class NationalGovermentSecuritiesAdminInterface {
             System.out.print("  Enter national quota: ");
             int nationalQuota = Integer.parseInt(scanner.nextLine());
 
-            NationalGovermentSecurities newSbn = new NationalGovermentSecurities(
+            NationalGovermentSecurities newNGS = new NationalGovermentSecurities(
                     code, name, interestRate, onMonth, maturityDate, nationalQuota
             );
 
-            boolean created = createService.create(newSbn);
+            boolean created = createService.create(newNGS);
 
             if (created) {
                 System.out.println("|------------------------------------------------------------|");
-                System.out.println("|  >> New SBN successfully created.                          |");
+                System.out.println("|  >> New NGS successfully created.                          |");
                 System.out.println("|------------------------------------------------------------|");
             } else {
                 System.out.println("|------------------------------------------------------------|");
-                System.out.println("|  >> Failed: SBN with the same code already exists.         |");
+                System.out.println("|  >> Failed: NGS with the same code already exists.         |");
                 System.out.println("|------------------------------------------------------------|");
             }
         } catch (NumberFormatException | DateTimeParseException e) {

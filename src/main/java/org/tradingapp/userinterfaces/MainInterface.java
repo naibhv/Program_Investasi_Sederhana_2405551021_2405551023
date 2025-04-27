@@ -10,7 +10,7 @@ public class MainInterface {
             System.out.println(
                     """
                     |============================================================|
-                    |                  Pilih Login Sebagai :                     |
+                    |                  Choose To Login As :                      |
                     |============================================================|
                     |  1. Admin                                                  |
                     |  2. Customer                                               |
@@ -18,13 +18,13 @@ public class MainInterface {
                     |============================================================| 
                     """
             );
-            System.out.print ("  Pilih salah satu :");
+            System.out.print ("  Choose an option :");
             Scanner scanner = new Scanner(System.in);
             int option = scanner.nextInt();
 
             if(option == 3) {
                 System.out.println("|------------------------------------------------------------|");
-                System.out.println("|                        Terima kasih                        |");
+                System.out.println("|                        Thank You!                          |");
                 System.out.println("|------------------------------------------------------------|");
                 break;
             }
@@ -39,7 +39,7 @@ public class MainInterface {
                 }
                 default -> {
                     System.out.println("|------------------------------------------------------------|");
-                    System.out.println("|                        Tidak ada opsi                      |");
+                    System.out.println("|                     There's No Option.                     |");
                     System.out.println("|------------------------------------------------------------|");
                 }
             }

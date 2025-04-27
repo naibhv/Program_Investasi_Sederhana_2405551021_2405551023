@@ -18,7 +18,7 @@ public class CustomerLoginInterface {
 
             if (!customerLoginService.isUsernameExist(inputUsername)) {
                 System.out.println("|------------------------------------------------------------|");
-                System.out.println("|                   Username tidak ada.                      |");
+                System.out.println("|                   Username Invalid.                        |");
                 System.out.println("|------------------------------------------------------------|");
                 continue;
             }
