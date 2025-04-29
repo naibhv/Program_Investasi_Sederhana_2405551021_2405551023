@@ -224,7 +224,8 @@ public class HomeCustomerInterface {
         System.out.println("\n========== AVAILABLE NATIONAL GOVERNMENT SECURITIES ==========");
         for (NationalGovermentSecurities sec : list) {
             System.out.println("- " + sec.getCode() + " | " + sec.getName()
-                    + " | Interest Rate: " + sec.getInterestRate() + "% | Maturity: " + sec.getMaturityDate());
+                    + " | Interest Rate: " + sec.getInterestRate() + "% \n" +
+                    "           Maturity: " + sec.getMaturityDate());
         }
         System.out.println("|============================================================|");
     }
