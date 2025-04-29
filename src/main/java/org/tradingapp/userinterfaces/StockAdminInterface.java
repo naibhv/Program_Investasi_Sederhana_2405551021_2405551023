@@ -77,7 +77,7 @@ public class StockAdminInterface {
         boolean success = createStockService.create(stock);
         System.out.println ("|----------------------------|");
         System.out.println(success ? "|>> Stock added successfully.|" : "|  >> Failed to add stock.   |");
-        System.out.println ("|------------------------------|");
+        System.out.println ("|----------------------------|");
     }
 
     private void updateStockPrice() {
@@ -88,7 +88,7 @@ public class StockAdminInterface {
 
         boolean success = updateStockService.updateStockPrice(code, price);
         System.out.println("|------------------------------------------------------------|");
-        System.out.println(success ? "|  >> Stock price updated successfully.  success ? |" : "|  >> Failed to update stock price. success ?                |");
+        System.out.println(success ? "|        >> Stock price updated successfully.                |" : "|  >> Failed to update stock price.                          |");
         System.out.println("|------------------------------------------------------------|");
     }
 
