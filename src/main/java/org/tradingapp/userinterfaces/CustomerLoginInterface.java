@@ -23,8 +23,7 @@ public class CustomerLoginInterface {
                 continue;
             }
 
-            System.out.println("\n");
-            System.out.print("Enter password for " + inputUsername + ": ");
+            System.out.print("      Enter password for " + inputUsername + ": ");
             String inputPassword = scanner.nextLine();
 
             Customer customer = customerLoginService.login(inputUsername, inputPassword);
