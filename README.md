@@ -136,5 +136,10 @@ User dapat memilih opsi 8 (Customer Logout) untuk kembali ke Main Interface.
 
 ![Screenshot 2025-04-29 215828](https://github.com/user-attachments/assets/87c887ae-0d65-49e0-9d7d-1c238df3d795)
 
+**UML Program**
 
+Berikut ini merupakan UML dari program Investasi Sederhana yang kami buat. Untuk melihat tampilan UML secara lebih jelas dan lengkap, dapat denga mengakses file melalui tautan Google Drive berikut. Tautan tersebut berisi file draw.io dan file PNG dari diagram UML.
+https://drive.google.com/drive/folders/1Cs4gTnv989WZL4TNuoV9frVbbxlcNxnC?usp=drive_link
+
+![UML Saham drawio](https://github.com/user-attachments/assets/acf83f95-0704-4416-b649-6e2c6f6380a3)
 
