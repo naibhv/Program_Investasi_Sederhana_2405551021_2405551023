@@ -51,6 +51,7 @@ Admin dapat kembali ke Home Admin Interface dengan memilih opsi 5 (Back), maka a
 ![Screenshot 2025-04-29 090241](https://github.com/user-attachments/assets/2c018279-f401-455b-8f1f-9d4bdab551d5)
 
 **Skenario Admin Memilih Opsi Manage NationalGovermentSecurities**
+
 Disini Admin memasuki NationalGovermentSecurities Admin Interface, dimana ada dua opsi yang dapat dipilih oleh Admin. Opsi 1 (View All NGS) yang akan menampilkan seluruh NationalGovermentSecurities dari DataSource. Dan opsi 2 (Create New NGS) untuk menambahkan Surat Berharga Negara yang baru.
 
 ![Screenshot 2025-04-29 090448](https://github.com/user-attachments/assets/20c6fb54-f7c7-49c7-a7b6-cd86d4d911ff)
@@ -99,14 +100,41 @@ Sama dengan opsi View All Stocks yang terdapat pada Admin, ketika Customer memil
 
 **View All National Goverment Securities**
 
+Sama dengan opsi View All NGS yang terdapat pada Admin, ketika Customer memilih opsi 7 (View All National Goverment Securities) sistem akan menampilkan daftar seluruh Surat Berharga Negara yang tersedia lengkap dengan informasi kode Surat Berharga Negara, nama Surat Berharga Negara, suku bunga, dan tanggal jatuh tempo.
+
 ![Screenshot 2025-04-29 093740](https://github.com/user-attachments/assets/77c230dc-315e-4a08-aeed-fdfb18f27d79)
+
+**Skenario Buy Stock**
+
+Jika Customer memilih opsi 1 (Buy Stock), maka program akan menampilkan seluruh data saham yang tersedia. Selanjutnya, Customer akan diminta untuk memasukan kode saham (stock code) serta jumlah saham yang ingin dibeli.
 
 ![Screenshot 2025-04-29 094014](https://github.com/user-attachments/assets/5e52e48d-e496-4308-b8f3-aa52b72b8d81)
 
+**Skenario Sell Stock**
+
+Pada opsi 2, Customer dapat menjual aset saham yang mereka miliki. Pertama, program akan menampilkan seluruh saham yang dimiliki Customer dengan beberapa detail informasi seperti kode saham, jumlah saham yang dimiliki saat ini dan harga pasar terkini. Selanjutnya Customer dapat memasukan kode dan jumlah saham yang ingin dijual. 
+
+Jika Customer berhasil menjual saham yang dimilikinya, maka data pada portfolio customer akan mengalami perubahan secara otomatis. Jumlah saham yang terjual akan berkurang sesuai dengan jumlah yang dijual. Proses pengurangan ini ditangani oleh MinusStockService, yang bertugas memperbarui data di dalam GlobalDataSource.
+
 ![Screenshot 2025-04-29 094105](https://github.com/user-attachments/assets/d29adc6e-ebbd-4d74-906a-7b42d3d2a2e3)
+
+**Skenario Buy National Goverment Securities (NGS)**
+
+Jika Customer ingin membeli Surat Berharga Negara (National Goverment Securities), maka Customer dapat memiih opsi 3 (Buy National Goverment Securities (NGS)). Dimana program akan menampilkan seluruh Surat Berharga Negara yang tersedia dengan beberapa informasi terkait SBN, seperti kode, nama, suku bunga, dan jatuh tempo dari SBN. Selanjutnya, Customer dapat membeli Surat Berharga Negaradengan memasukan kode dan jumlah investasi. 
 
 ![Screenshot 2025-04-29 094454](https://github.com/user-attachments/assets/c8d400d5-09da-4f1a-9126-899afd20ca82)
 
+**Skenario Simulate NGS coupun**
+
+Jika Customer memilih opsi 4 (Simulate NGS coupun) maka Customer dapat melihat estimasi keuntungan per bulan dari SBN yang dimiliki Customer. Dimana, Customer akan diminta untuk memasukan kode SBN yang kemudian sistem akan menghitung estimasi sesuai dengan rumus yang ditetapkan pada kelas NationalGovermentSecuritiesSimulation.
+
 ![Screenshot 2025-04-29 094541](https://github.com/user-attachments/assets/5dce58c3-0f95-4869-a1af-b7b47fa0e90e)
 
-![Screenshot 2025-04-29 094635](https://github.com/user-attachments/assets/0575d909-4764-47c7-b5a8-769d92a4adc7)
+**Skenario Customer Logout**
+
+User dapat memilih opsi 8 (Customer Logout) untuk kembali ke Main Interface.
+
+![Screenshot 2025-04-29 215828](https://github.com/user-attachments/assets/87c887ae-0d65-49e0-9d7d-1c238df3d795)
+
+
+
